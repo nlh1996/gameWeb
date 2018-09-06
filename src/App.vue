@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
+    <hr>
+    <foot></foot>
   </div>
 </template>
 
 <script>
+
+import foot from "@/components/Foot"
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    foot,
+  }
 }
 </script>
 
@@ -18,6 +24,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 95%;
+  margin: 0 auto;
 }
 </style>
