@@ -8,9 +8,9 @@
             <el-col span="18">
                 <ul class="daohang">
                     <li><router-link to="/">首页</router-link></li>
-                    <li><router-link to="/error">个人中心</router-link></li>
                     <li><router-link to="/error">论坛</router-link></li>
                     <li><router-link to="/error">充值</router-link></li>
+                    <li><router-link to="/error">个人中心</router-link></li>
                 </ul>
             </el-col>
         </el-row>

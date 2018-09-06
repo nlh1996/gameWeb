@@ -6,6 +6,7 @@
         <h3><img :src="item.url" width=100%></h3>
       </el-carousel-item>
     </el-carousel>
+    
   </div>
 </template>
 

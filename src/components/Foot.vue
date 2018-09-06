@@ -2,19 +2,22 @@
     <div class="foot">
         <el-row>
             <el-col span="6">
-                <img :src="url">
+                <div class="footer-colume"><img :src="url"></div>
             </el-col>
 
-            <el-col span="18">
-                <ul class="tips">
-                    <li>关于游族</li>|
-                    <li>游族无线</li>|
-                    <li>联系我们</li>|
-                    <li>客服中心</li>|
-                    <li>商务合作</li>|
-                    <li>用户许可证</li>
-                </ul>
+            <el-col span="6">
+                <div class="colume-title">在这里找到我们</div>
+                <div class="colume-content">一个前端学习的项目，可以在https://github.com/nlh1996/gameWeb找到该项目。</div>
+            </el-col>
 
+            <el-col span="6">
+                <div class="colume-title">联系我们</div>
+                <div class="colume-content">目前有两人参与该项目，QQ:1217286494。</div>
+            </el-col>
+
+            <el-col span="6">
+                <div class="colume-title">友情链接</div>
+                <div class="colume-content"><a href="https://github.com/nlh1996/gameWeb">git地址</a></div>
             </el-col>
         </el-row>
     </div>
@@ -31,11 +34,31 @@
 </script>
 
 <style scoped>
-.tips ul,li{
-    padding: 10px;
-    list-style: none;
-    display: inline;
+.foot{
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 166px;
+    background: #48525e;
+    color: #e6e6e6;
+    font-family: microsoft Yahei;
+    -webkit-font-smoothing: antialiased;
+}
+.colume-title{
+    font-size: 18px;
+    color: rgb(53, 176, 180);
+    font-weight: bold;
+}
+.colume-content{
+    text-align: left;
+    margin-left: 90px;
     font-size: 14px;
+    width: 80%;
+}
+div{
+    margin-top: 10px;
 }
 
 </style>
