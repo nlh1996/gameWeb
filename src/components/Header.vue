@@ -7,10 +7,10 @@
 
             <el-col span="18">
                 <ul class="daohang">
-                    <li>首页</li>
-                    <li>个人中心</li>
-                    <li>论坛</li>
-                    <li>充值</li>
+                    <li><router-link to="/">首页</router-link></li>
+                    <li><router-link to="/error">个人中心</router-link></li>
+                    <li><router-link to="/error">论坛</router-link></li>
+                    <li><router-link to="/error">充值</router-link></li>
                 </ul>
             </el-col>
         </el-row>
@@ -33,6 +33,20 @@
     list-style: none;
     display: inline;
     font-size: 18px;
+}
+/* 指针移动到链接上 */
+a:hover {         
+  color: white;  
+  height: 30px;  
+  background: #f00;
+}
+/* 被点击 */
+a:active{  
+    color: #000;  
+}
+/* 已被访问 */
+a:visited {
+     color: #a369af;
 }
 
 </style>
