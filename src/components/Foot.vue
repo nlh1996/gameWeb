@@ -12,7 +12,7 @@
 
             <el-col span="6">
                 <div class="colume-title">联系我们</div>
-                <div class="colume-content">目前有两人参与该项目，QQ:1217286494。</div>
+                <div class="colume-content">目前有两人参与该项目，QQ群号：</div>
             </el-col>
 
             <el-col span="6">
