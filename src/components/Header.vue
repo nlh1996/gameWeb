@@ -19,7 +19,6 @@
               class="right">
         <ul class="nav clearfix"
             @mouseout="setMouseOut">
-
           <li class="nav__item"
               v-for="item in navData"
               :key="item.key"

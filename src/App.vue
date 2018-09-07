@@ -1,22 +1,21 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <router-view></router-view>
-    <hr>
-    <foot></foot>
+    <app-footer></app-footer>
   </div>
 </template>
-
 <script>
-
-import foot from "@/components/Foot"
+import appHeader from "@/components/Header"
+import appFooter from "@/components/Foot"
 export default {
   name: 'App',
-  components:{
-    foot,
+  components: {
+    appHeader,
+    appFooter
   }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -26,5 +25,6 @@ export default {
   color: #2c3e50;
   width: 95%;
   margin: 0 auto;
+  background-color: #d9e0e7;
 }
 </style>
