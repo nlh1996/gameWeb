@@ -1,21 +1,21 @@
 <template>
- <div class="head">
+  <div class="head">
     <el-row>
        <!-- S 头部logo模块 -->
       <el-col span="6"
               class="left">
-         <h1 class="logo">
+        <h1 class="logo">
           <img class=“logo__img”
                :src="url">
         </h1>
-       </el-col>
+      </el-col>
       <!-- E 头部logo模块  -->
        <!-- S 头部导航模块 -->
       <el-col span="18"
               class="right">
         <ul class="nav clearfix"
             @mouseout="setMouseOut">
-           <li class="nav__item"
+          <li class="nav__item"
               v-for="item in navData"
               :key="item.key"
               @mouseover="setMouseOver(item)"
@@ -24,20 +24,20 @@
                          :class="{'nav__item_current':item.state}"
                          :to="{name:item.router}">{{ item.name }}</router-link>
           </li>
-         </ul>
+        </ul>
         <!-- /头部导航模块 -->
-         <span class="slide"
+        <span class="slide"
               :style="slideObject"></span>
         <!-- /滑动条 -->
-       </el-col>
+        </el-col>
       <!-- E 头部导航模块 -->
-     </el-row>
+    </el-row>
   </div>
 </template>
 
 <script>
 export default {
-   data () {
+  data () {
     return {
       url: require('../assets/head/logo.png'),
       navData: [

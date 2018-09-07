@@ -52,6 +52,6 @@
 
 <style scoped>
 .tips{
-    margin-top: 30px;
+    
 }
 </style>
