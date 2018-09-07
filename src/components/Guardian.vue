@@ -84,8 +84,8 @@
     list-style: none;
     position: absolute;
     list-style-type: none;
-    left: 530px;
-    top: 25px;
+    left: 40%;
+    top: 23px;
 }
 .headimg li{
     display: inline;
