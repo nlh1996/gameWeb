@@ -1,6 +1,6 @@
 <template>
     <div class="view">
-        <el-row>         
+        <el-row class="header">         
             <headlist></headlist>
         </el-row>
 
@@ -45,6 +45,9 @@
 </script>
 
 <style scoped>
-
+.header {
+  border-top: 1px solid #d2d5da;
+  background: #fff url('../assets/head/platform_header_bg.jpg') repeat-x;
+}
 
 </style>
