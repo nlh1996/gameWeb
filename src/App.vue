@@ -9,7 +9,8 @@ export default {
 }
 </script>
 <style lang="less">
-@import 'assets/style/index.scss';
+@import 'assets/styles/index.less';
+
 #app {
   height: 100%;
 }

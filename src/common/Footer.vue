@@ -38,11 +38,11 @@ export default {
     return {
       url: '/static/img/foot/logo_footer.png',
       images: [
-        { url: '/staic/img/foot/picp_bg.png' },
-        { url: '/staic/img/foot/zhengshu_gongshang.png' },
-        { url: '/staic/img/foot/zhengshu_zhengxin.png' },
-        { url: '/staic/img/foot/weifaIcon.png' },
-        { url: '/staic/img/foot/jhgc.png' },
+        { url: '/static/img/foot/picp_bg.png' },
+        { url: '/static/img/foot/zhengshu_gongshang.png' },
+        { url: '/static/img/foot/zhengshu_zhengxin.png' },
+        { url: '/static/img/foot/weifaIcon.png' },
+        { url: '/static/img/foot/jhgc.png' },
       ]
     }
   },
