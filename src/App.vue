@@ -8,5 +8,12 @@ export default {
   name: 'app'
 }
 </script>
-<style>
+<style lang="less">
+@import 'assets/style/index.scss';
+#app {
+  height: 100%;
+}
+.main {
+  background: #f1f4f9;
+}
 </style>
