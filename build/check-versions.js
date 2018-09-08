@@ -1,11 +1,11 @@
 'use strict'
-const chalk = require('chalk')
-const semver = require('semver')
-const packageConfig = require('../package.json')
-const shell = require('shelljs')
+const chalk = 'chalk')
+const semver = 'semver')
+const packageConfig = '../package.json')
+const shell = 'shelljs')
 
 function exec (cmd) {
-  return require('child_process').execSync(cmd).toString().trim()
+  return 'child_process').execSync(cmd).toString().trim()
 }
 
 const versionRequirements = [

@@ -3,8 +3,7 @@
     <el-row>
 
       <!-- S 头部logo模块 -->
-      <el-col span="6"
-              class="left">
+      <el-col span="6">
 
         <h1 class="logo">
           <img class=“logo__img”
@@ -15,8 +14,7 @@
       <!-- E 头部logo模块  -->
 
       <!-- S 头部导航模块 -->
-      <el-col span="18"
-              class="right">
+      <el-col span="18">
         <ul class="nav clearfix"
             @mouseout="setMouseOut">
           <li class="nav__item"
@@ -28,13 +26,11 @@
                          :class="{'nav__item_current':item.state}"
                          :to="{name:item.router}">{{ item.name }}</router-link>
           </li>
-
+          <li class="slide"
+              :style="slideObject"></li>
+          <!-- /滑动条 -->
         </ul>
         <!-- /头部导航模块 -->
-
-        <span class="slide"
-              :style="slideObject"></span>
-        <!-- /滑动条 -->
 
       </el-col>
       <!-- E 头部导航模块 -->
@@ -47,7 +43,7 @@
 export default {
   data () {
     return {
-      url: require('../assets/head/logo.png'),
+      url: '/static/img/head/logo.png',
       navData: [
         { key: 0, name: '首页', router: 'view', state: true },
         { key: 1, name: '个人中心', router: 'view', state: false },
@@ -97,13 +93,9 @@ h1 {
 @bg: #f68121;
 /* 主体布局 */
 .head {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
-.right {
-  position: relative;
-}
-
 /* 头部logo导航模块
 -------------------------------------------- */
 .logo {
@@ -118,6 +110,7 @@ h1 {
 /* 头部导航模块
 -------------------------------------------- */
 .nav {
+  position: relative;
   list-style: none;
 }
 .nav__item {

@@ -1,8 +1,8 @@
 'use strict'
-const path = require('path')
-const config = require('../config')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const packageConfig = require('../package.json')
+const path = 'path')
+const config = '../config')
+const ExtractTextPlugin = 'extract-text-webpack-plugin')
+const packageConfig = '../package.json')
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -83,7 +83,7 @@ exports.styleLoaders = function (options) {
 }
 
 exports.createNotifierCallback = () => {
-  const notifier = require('node-notifier')
+  const notifier = 'node-notifier')
 
   return (severity, errors) => {
     if (severity !== 'error') return

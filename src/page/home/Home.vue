@@ -1,26 +1,26 @@
 <template>
-  <div class="view">
-    <el-row>
-      <div>
-        <el-col span="24">
-          <carousel></carousel>
-        </el-col>
-      </div>
+  <div class="home">
 
+    <el-row>
+      <el-col span="24">
+        <carousel></carousel>
+      </el-col>
+      <!-- /轮播图 -->
     </el-row>
 
     <el-row>
+
       <el-col span="18">
-        <div>
-          <gamelist></gamelist>
-        </div>
+        <gamelist></gamelist>
       </el-col>
+      <!-- /游戏列表 -->
 
       <el-col span="6">
         <div class="login">
-
         </div>
       </el-col>
+      <!-- /登陆 -->
+
     </el-row>
 
     <el-row>
@@ -41,27 +41,27 @@
         </el-col>
       </div>
     </el-row>
+
     <el-row>
       <el-col span="24">
         <tips></tips>
       </el-col>
+      <!-- /tips -->
     </el-row>
+
   </div>
 </template>
 
 <script>  
 import gamelist from '@/components/GameList'
-import headlist from '@/components/Header'
 import carousel from '@/components/Carousel'
 import tips from "@/components/Tips"
-
-
 export default {
-  name: 'main',
+  name: 'home',
   components: {
     gamelist,
-    headlist,
-    carousel
+    carousel,
+    tips
   }
 }
 </script>
@@ -69,7 +69,7 @@ export default {
 <style scoped>
 .header {
   border-top: 1px solid #d2d5da;
-  background: #fff url('../assets/head/platform_header_bg.jpg') repeat-x;
+  /* background: #fff url('../../assets/head/platform_header_bg.jpg') repeat-x; */
 }
 .extend {
   margin-top: 30px;

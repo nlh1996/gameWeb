@@ -1,14 +1,14 @@
 'use strict'
-const utils = require('./utils')
-const webpack = require('webpack')
-const config = require('../config')
-const merge = require('webpack-merge')
-const path = require('path')
-const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const portfinder = require('portfinder')
+const utils = './utils')
+const webpack = 'webpack')
+const config = '../config')
+const merge = 'webpack-merge')
+const path = 'path')
+const baseWebpackConfig = './webpack.base.conf')
+const CopyWebpackPlugin = 'copy-webpack-plugin')
+const HtmlWebpackPlugin = 'html-webpack-plugin')
+const FriendlyErrorsPlugin = 'friendly-errors-webpack-plugin')
+const portfinder = 'portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -46,7 +46,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../config/dev.env')
+      'process.env': '../config/dev.env')
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.

@@ -1,17 +1,17 @@
 'use strict'
-const path = require('path')
-const utils = require('./utils')
-const webpack = require('webpack')
-const config = require('../config')
-const merge = require('webpack-merge')
-const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const path = 'path')
+const utils = './utils')
+const webpack = 'webpack')
+const config = '../config')
+const merge = 'webpack-merge')
+const baseWebpackConfig = './webpack.base.conf')
+const CopyWebpackPlugin = 'copy-webpack-plugin')
+const HtmlWebpackPlugin = 'html-webpack-plugin')
+const ExtractTextPlugin = 'extract-text-webpack-plugin')
+const OptimizeCSSPlugin = 'optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = 'uglifyjs-webpack-plugin')
 
-const env = require('../config/prod.env')
+const env = '../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -120,7 +120,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 })
 
 if (config.build.productionGzip) {
-  const CompressionWebpackPlugin = require('compression-webpack-plugin')
+  const CompressionWebpackPlugin = 'compression-webpack-plugin')
 
   webpackConfig.plugins.push(
     new CompressionWebpackPlugin({
@@ -138,7 +138,7 @@ if (config.build.productionGzip) {
 }
 
 if (config.build.bundleAnalyzerReport) {
-  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  const BundleAnalyzerPlugin = 'webpack-bundle-analyzer').BundleAnalyzerPlugin
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
