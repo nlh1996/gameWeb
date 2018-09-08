@@ -1,20 +1,18 @@
 'use strict'
-const chalk = 'chalk')
-const semver = 'semver')
-const packageConfig = '../package.json')
-const shell = 'shelljs')
+const chalk = require('chalk')
+const semver = require('semver')
+const packageConfig = require('../package.json')
+const shell = require('shelljs')
 
-function exec (cmd) {
-  return 'child_process').execSync(cmd).toString().trim()
+function exec(cmd) {
+  return require('child_process').execSync(cmd).toString().trim()
 }
 
-const versionRequirements = [
-  {
-    name: 'node',
-    currentVersion: semver.clean(process.version),
-    versionRequirement: packageConfig.engines.node
-  }
-]
+const versionRequirements = [{
+  name: 'node',
+  currentVersion: semver.clean(process.version),
+  versionRequirement: packageConfig.engines.node
+}]
 
 if (shell.which('npm')) {
   versionRequirements.push({
