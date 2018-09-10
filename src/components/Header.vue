@@ -2,7 +2,7 @@
   <div class="head">
     <el-row>
        <!-- S 头部logo模块 -->
-      <el-col span="6"
+      <el-col :span="6"
               class="left">
         <h1 class="logo">
           <img class=“logo__img”
@@ -11,7 +11,7 @@
       </el-col>
       <!-- E 头部logo模块  -->
        <!-- S 头部导航模块 -->
-      <el-col span="18"
+      <el-col :span="18"
               class="right">
         <ul class="nav clearfix"
             @mouseout="setMouseOut">
@@ -44,7 +44,7 @@ export default {
         { key: 0, name: '首页', router: 'view', state: true },
         { key: 1, name: '个人中心', router: 'view', state: false },
         { key: 2, name: '论坛', router: 'error', state: false },
-        { key: 3, name: '充值', router: 'error', state: false },
+        { key: 3, name: '充值', router: 'voucherView', state: false },
       ],
       slideObject: {
         left: '0'

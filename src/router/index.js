@@ -3,7 +3,10 @@ import Router from 'vue-router'
 import Register from '@/components/Register'
 import View from '@/components/View'
 import Error from '@/components/Error'
-import guardian from "@/components/Guardian"
+import Guardian from "@/components/Guardian"
+import VoucherView from '@/components/voucher_center/VoucherView'
+import LeftMenu from '@/components/voucher_center/LeftMenu'
+import RightTable from '@/components/voucher_center/RightTable'
 Vue.use(Router)
 
 export default new Router({
@@ -26,7 +29,23 @@ export default new Router({
     {
       path: '/guardian',
       name: 'guardian',
-      component: guardian
+      component: Guardian
+    },
+    {
+      path: '/voucherView',
+      name: 'voucherView',
+      component: VoucherView
+    },
+    {
+      path: '/voucherView/leftMenu',
+      name: 'leftMenu',
+      component: LeftMenu
+    },
+    {
+      path: '/voucherView/rightTable',
+      name: 'rightTable',
+      component: RightTable
     }
+
   ]
 })
