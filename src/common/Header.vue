@@ -4,16 +4,17 @@
             :sm="24"
             :md="24"
             :lg="24">
-      <el-menu :default-active="$route.path"
+      <el-menu :default-active="activeIndex"
                class="el-menu-header"
                mode="horizontal"
                @select="handleSelect"
                text-color="#333"
                active-text-color="#f68121"
                router>
-        <el-menu-item class="logo">
+        <el-menu-item class="logo"
+                      index="/home">
           <img :src="mobileImg"
-               alt="logo"
+               alt="yoozoo"
                class="logo__img">
         </el-menu-item>
         <el-menu-item index="/home">首页</el-menu-item>
@@ -32,12 +33,7 @@
 export default {
   data () {
     return {
-      navList: [
-        { key: 0, name: '首页', path: 'home' },
-        { key: 1, name: '个人中心', path: 'user' },
-        { key: 2, name: '论坛', path: 'bbs' },
-        { key: 3, name: '充值', path: 'pay' },
-      ],
+      activeIndex: '/home',
       pcImg: '/static/img/head/logo.png',
       mobileImg: '/static/img/head/logo_mobile.png'
     };
@@ -48,16 +44,18 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath);
+
     }
   }
 }
 </script>
 <style lang="less" scoped>
+.logo {
+  border-bottom: none !important;
+}
 .logo__img {
   width: 120px;
   height: 39px;
-  // width: 40%;
-  // height: 40%;
 }
 @media screen and (max-width: 480px) {
   .logo {
@@ -67,7 +65,6 @@ export default {
   .logo__img {
     width: 85px;
     height: 30px;
-    // width: 25%;
   }
 }
 </style>
