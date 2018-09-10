@@ -51,7 +51,9 @@ export default new Router({
       path: '/personal',
       name: 'personal',
       component: Personal
-    }
-
-  ]
+    },
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return {x:0,y:0}
+  }
 })

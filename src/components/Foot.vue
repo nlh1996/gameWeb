@@ -22,9 +22,19 @@
         </el-row>
 
         <el-row class="foot-img">
-            <ul>
-                <li v-for="item in images" :key="item"><img :src="item.url"></li>
-            </ul>
+            <el-col>
+                <a target="_blank" rel="nofollow" href="http://www.zx110.org/picp/?sn=310104100043687">备案号：310104100043687</a>
+                <a target="_blank" rel="nofollow" href="http://www.zx110.org/picp/?sn=310104100043687">备案号：310104100043687</a>
+                <a rel="nofollow" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备09058784号</a>
+                <a href="//pic.youzu.com/youzu/images/layout/net.jpg" target="_blank">沪网文[2015]0819-219</a>
+                <a href="http://pic.youzu.com/youzu/images/layout/publish.jpg" rel="nofollow" target="_blank">新出网证(沪)字33号</a>
+                <p class="ft_copyright">xx有限公司 ©版权所有</p>
+            </el-col>
+            <el-col>
+                <ul>
+                    <li v-for="item in images" :key="item"><router-link to="/guardian"><img :src="item.url"></router-link></li>
+                </ul>
+            </el-col>
         </el-row>
     </div>
 </template>
