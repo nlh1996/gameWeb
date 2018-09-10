@@ -1,20 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Register from '@/components/Register'
-import View from '@/components/View'
+import Home from '@/components/home/Home'
 import Error from '@/components/Error'
-import Guardian from "@/components/Guardian"
+import Guardian from "@/components/guardian/Guardian"
 import VoucherView from '@/components/voucher_center/VoucherView'
 import LeftMenu from '@/components/voucher_center/LeftMenu'
 import RightTable from '@/components/voucher_center/RightTable'
+import Personal from '@/components/personal_center/Personal'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'view',
-      component: View
+      name: 'home',
+      component: Home
     },
     {
       path: '/register/',
@@ -45,6 +46,11 @@ export default new Router({
       path: '/voucherView/rightTable',
       name: 'rightTable',
       component: RightTable
+    },
+    {
+      path: '/personal',
+      name: 'personal',
+      component: Personal
     }
 
   ]

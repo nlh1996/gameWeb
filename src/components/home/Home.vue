@@ -1,9 +1,5 @@
 <template>
-    <div class="view">
-        <el-row class="header">         
-            <headlist></headlist>
-        </el-row>
-
+    <div class="home">
         <el-row>
             <div>
                 <el-col span="24">
@@ -22,7 +18,7 @@
 
             <el-col span="6">
                 <div class="login">
-                    
+                    <login></login>
                 </div>
             </el-col>
          </el-row>
@@ -41,24 +37,23 @@
 </template>
 
 <script>  
-    import gamelist from '@/components/GameList'
-    import headlist from '@/components/Header'
-    import carousel from '@/components/Carousel'
+    import gamelist from '@/components/home/GameList'
 
+    import carousel from '@/components/home/Carousel'
+    import login from '@/components/Login'
     export default {
         name: 'main',
         components:{
             gamelist,
-            headlist,
-            carousel
+            carousel,
+            login
         }    
     }
 </script>
 
 <style scoped>
-.header {
-  border-top: 1px solid #d2d5da;
-  background: #fff url('../assets/head/platform_header_bg.jpg') repeat-x;
+.home{
+
 }
 .extend{
     margin-top: 30px;
@@ -71,6 +66,10 @@
     border-radius: 10px;
     height: 40px;
     text-align: center;
+}
+.login{
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
 

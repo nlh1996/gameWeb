@@ -2,11 +2,7 @@
 <template>
     <diV class="view">
         <div class="headimg">
-            <ul>
-                <li v-for="item in headimgs" :key="item">
-                    <span class="headimg-margin"><img :src="item.url"></span>
-                </li>
-            </ul>
+
         </div>
         <diV class="aa">
         <div class="left">
@@ -49,13 +45,13 @@
         data() {
             return {
                 headimgs: [
-                    {url: require("../assets/parent_img/Tag1.gif")},
-                    {url: require("../assets/parent_img/Tag2.gif")},
-                    {url: require("../assets/parent_img/Tag3.gif")},
+                    {url: require("../../assets/parent_img/Tag1.gif")},
+                    {url: require("../../assets/parent_img/Tag2.gif")},
+                    {url: require("../../assets/parent_img/Tag3.gif")},
                 ],
-                headline_url: require("../assets/parent_img/headline.jpg"),
-                bg1_url: require("../assets/parent_img/bg1.jpg"),
-                bg2_url: require("../assets/parent_img/bg2.jpg"),
+                headline_url: require("../../assets/parent_img/headline.jpg"),
+                bg1_url: require("../../assets/parent_img/bg1.jpg"),
+                bg2_url: require("../../assets/parent_img/bg2.jpg"),
             }
         },
         components: {
@@ -72,7 +68,7 @@
 
 
 .headimg{
-    background-image: url("../assets/parent_img/headline.jpg");
+    background-image: url("../../assets/parent_img/headline.jpg");
     background-repeat: round;
     width: 100%;
     height: 350px;
@@ -80,16 +76,7 @@
     padding: 0px;
 }
 
-.headimg ul{
-    list-style: none;
-    position: absolute;
-    list-style-type: none;
-    left: 40%;
-    top: 23px;
-}
-.headimg li{
-    display: inline;
-}
+
 
 .headimg-margin{
     margin-left: 50px;
@@ -115,7 +102,7 @@
 .bg1{
     padding: 10px;
     margin-top: 10px;
-    background-image: url("../assets/parent_img/bg1.jpg");
+    background-image: url("../../assets/parent_img/bg1.jpg");
     background-repeat: round;
     width: 600px;
     height: 180px;
@@ -125,7 +112,7 @@
 .bg2{
     padding: 10px;
     margin-top: 10px;
-    background-image: url("../assets/parent_img/bg2.jpg");
+    background-image: url("../../assets/parent_img/bg2.jpg");
     background-repeat: round;
     width: 600px;
     height: 150px;

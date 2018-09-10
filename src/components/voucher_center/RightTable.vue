@@ -2,7 +2,7 @@
   <div>
     <el-form ref="form" :model="form" label-width="120px" label-position="left">
       <el-form-item label="充值到：">
-        <el-col span="12">
+        <el-col span="10">
           <el-radio-group v-model="redio3">
           <el-radio-button label="U币"></el-radio-button>
           <el-radio-button label="游戏"></el-radio-button>
@@ -18,7 +18,7 @@
       </el-form-item>
 
       <el-form-item label="选择游戏：">
-        <el-col span="12">
+        <el-col span="10">
         <el-select v-model="form.region" placeholder="选择充值游戏">
           <el-option label="游戏一" value=""></el-option>
           <el-option label="游戏二" value=""></el-option>
@@ -67,6 +67,10 @@
       <el-form-item label="选择银行卡：">
 
       </el-form-item>
+      <hr>
+      <el-button style="width:255px;height:50px" class="button">
+        <strong style="color:white;font-size:16px">立即支付</strong>
+      </el-button>
     </el-form>
   </div>
 </template>
@@ -88,5 +92,8 @@
 </script>
 
 <style scoped>
+.button{
+  background: #ff7800;
+}
 
 </style>

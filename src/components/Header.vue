@@ -41,10 +41,10 @@ export default {
     return {
       url: require('../assets/head/logo.png'),
       navData: [
-        { key: 0, name: '首页', router: 'view', state: true },
-        { key: 1, name: '个人中心', router: 'view', state: false },
+        { key: 0, name: '首页', router: 'home', state: true },
+        { key: 1, name: '充值', router: 'voucherView', state: false },
         { key: 2, name: '论坛', router: 'error', state: false },
-        { key: 3, name: '充值', router: 'voucherView', state: false },
+        { key: 3, name: '个人', router: 'personal', state: false },
       ],
       slideObject: {
         left: '0'

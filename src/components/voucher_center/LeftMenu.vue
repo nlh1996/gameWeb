@@ -20,6 +20,15 @@
             <li>
                 <div class="block">游戏点卡充值</div>
             </li>
+            <li>
+                <div class="block">客服电话</div>
+            </li>
+            <li>
+                <div class="block">未成年人监护工程</div>
+            </li>
+            <li>
+                <div class="block">实名制信息补填</div>
+            </li>
             </ul>
         </div>
 
@@ -47,10 +56,10 @@
     text-align: left;
     display: block;
     width: 250px;
-    background-color:rgb(234, 240, 240);
+    background: #f8f8f8;
 }
 .block{
-    background-color:rgb(234, 240, 240);
+    background: #f8f8f8;
     display: block;
     padding: 30px;
 }

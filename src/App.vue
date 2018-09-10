@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="header">         
+      <headlist></headlist>
+    </div>
     <router-view></router-view>
     <div class="tips">
       <tips></tips>
@@ -15,12 +18,13 @@
 <script>
 import tips from "@/components/Tips"
 import foot from "@/components/Foot"
-
+import headlist from '@/components/Header'
 export default {
   name: 'App',
   components:{
     foot,
-    tips
+    tips,
+    headlist
   }
 }
 </script>
@@ -35,6 +39,10 @@ export default {
   width: 95%;
   margin: 0 auto;
   background-color:#d9e0e7
+}
+.header {
+  border-top: 1px solid #d2d5da;
+  background-color: white;
 }
 .foot{
   margin-top: 10px;

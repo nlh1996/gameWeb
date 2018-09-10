@@ -23,12 +23,12 @@
         data() {
             return {
                 images:[
-                    {url: require("../assets/game_img/img1.jpg")},
-                    {url: require("../assets/game_img/img2.jpg")},
-                    {url: require("../assets/game_img/img3.jpg")},
-                    {url: require("../assets/game_img/img4.jpg")},
-                    {url: require("../assets/game_img/img5.jpg")},
-                    {url: require("../assets/game_img/img6.jpg")},
+                    {url: require("../../assets/game_img/img1.jpg")},
+                    {url: require("../../assets/game_img/img2.jpg")},
+                    {url: require("../../assets/game_img/img3.jpg")},
+                    {url: require("../../assets/game_img/img4.jpg")},
+                    {url: require("../../assets/game_img/img5.jpg")},
+                    {url: require("../../assets/game_img/img6.jpg")},
                 ]
             }
         },

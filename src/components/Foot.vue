@@ -47,6 +47,9 @@
 </script>
 
 <style scoped>
+.foot{
+    margin-block-end: 80px;
+}
 .foot-text{
     
     margin: 0px;
