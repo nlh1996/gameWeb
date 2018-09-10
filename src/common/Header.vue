@@ -17,6 +17,8 @@
                alt="yoozoo"
                class="logo__img">
         </el-menu-item>
+        <!-- /头部logo -->
+
         <el-menu-item index="/home">首页</el-menu-item>
         <el-menu-item index="/user">
           个人中心
@@ -38,13 +40,9 @@ export default {
       mobileImg: '/static/img/head/logo_mobile.png'
     };
   },
-  mounted () {
-    console.log($route.keyPath);
-  },
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath);
-
     }
   }
 }
