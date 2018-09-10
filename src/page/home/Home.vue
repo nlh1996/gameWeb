@@ -5,7 +5,7 @@
       <el-col span="24">
         <carousel></carousel>
       </el-col>
-      <!-- /轮播图 -->
+
     </el-row>
 
     <el-row>
@@ -13,13 +13,11 @@
       <el-col span="18">
         <gamelist></gamelist>
       </el-col>
-      <!-- /游戏列表 -->
 
       <el-col span="6">
         <div class="login">
         </div>
       </el-col>
-      <!-- /登陆 -->
 
     </el-row>
 
@@ -46,7 +44,7 @@
       <el-col span="24">
         <tips></tips>
       </el-col>
-      <!-- /tips -->
+
     </el-row>
 
   </div>

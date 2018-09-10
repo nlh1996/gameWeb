@@ -16,10 +16,12 @@ export default new Router({
     redirect: '/home',
     children: [{
         path: 'home',
+        name: 'home',
         component: Home
       },
       {
         path: 'user',
+        name: 'user',
         component: User
       },
       {
