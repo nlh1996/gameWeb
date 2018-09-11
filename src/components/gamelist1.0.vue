@@ -54,11 +54,9 @@ export default {
       ],
       gameData: [
         { key: 1, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' },
-        { key: 2, name: '射雕英雄传', info: '新《射雕英雄传》是由游族网络大侠工作室倾力打造的一款正版情义武侠ARP...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0821/172007661.jpg' },
-        { key: 3, name: '大皇帝', info: '为策略游戏用户量身定制的SLG，别具一格的游戏特色：水墨画风复古战场，...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0411/134842161.jpg' },
-        { key: 4, name: '女神联盟2', info: '全3D人物建模栩栩如生，唯美场景、宏大剧情引人入胜，经典回合制独创新意...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0411/134747665.jpg' },
-        { key: 5, name: '盗墓笔记', info: '《游族网络《盗墓笔记》是由南派三叔正版授权、国民影帝黄渤倾情代言的一款A...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/142557342.jpg' },
-        { key: 6, name: '刀剑乱舞-ONLINE', info: '由DMM Games制作、Nitroplus主世界观和角色、游族网络在...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/144814666.jpg' },
+        { key: 2, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' },
+        { key: 3, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' },
+        { key: 4, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' },
         { key: 5, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' },
         { key: 6, name: '三十六计', info: '《三十六计》是由游族网络的战神工作室潜心打造的一款优质三国策略网页游戏...', site: 'http://36.youzu.com/', img: 'http://upload.youzu.com/youzu/2018/0404/174346628.jpg' }
       ]
@@ -68,16 +66,31 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../assets/styles/theme.less';
+/* .gemeList ul,
+li {
+  list-style: none;
+  width: 30%;
+  border: 1px solid #e5e9f2;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 2px;
+  float: left;
+  margin: 2px;
+  font-size: 16px;
+  color: brown;
+} */
+
 .gamelist {
   position: relative;
-  max-width: 1200px;
-  height: 200px;
-  margin: 0 auto;
+  top: -600px;
+  // /* margin-top: -100px; */
+  width: 100%;
   z-index: 2;
 }
 .inner {
-  position: absolute;
-  top: -520px;
+  max-width: 820px;
+  margin: 0 auto;
   padding: 20px;
   background: #fff;
 }
@@ -106,17 +119,19 @@ export default {
 }
 .content__list {
   display: flex;
-  flex-direction: row;
+  height: 600px;
+  direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: space-around;
 }
 .content__list-item {
   width: 263px;
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 .cli-img {
   width: 100%;
-  height: 180px;
+  height: 171px;
 }
 .cli-title {
   margin: 10px 0;
@@ -136,21 +151,5 @@ export default {
 }
 .cli-site-a {
   color: @c3;
-}
-@media screen and (max-width: 1200px) {
-  .inner {
-    position: absolute;
-    top: -380px;
-    padding: 20px;
-    background: #fff;
-  }
-}
-@media screen and (max-width: 850px) {
-  .inner {
-    position: absolute;
-    top: -100px;
-    padding: 20px;
-    background: #fff;
-  }
 }
 </style>

@@ -1,4 +1,4 @@
-// 监护人组件
+
 <template>
   <diV class="view">
     <div class="headimg">
@@ -45,22 +45,18 @@
 </template>
 
 <script>
-import headlist from "@/components/Header"
 export default {
   data () {
     return {
       headimgs: [
-        { url: "../assets/parent_img/Tag1.gif") },
-        { url: "../assets/parent_img/Tag2.gif") },
-        { url: "../assets/parent_img/Tag3.gif") },
+        { url: "/static/img/parent_img/Tag1.gif" },
+        { url: "/static/img/parent_img/Tag2.gif" },
+        { url: "/static/img/parent_img/Tag3.gif" },
       ],
-      headline_url: "../assets/parent_img/headline.jpg"),
-      bg1_url: "../assets/parent_img/bg1.jpg"),
-      bg2_url: "../assets/parent_img/bg2.jpg"),
+      headline_url: "static/img/parent_img/headline.jpg",
+      bg1_url: "/static/img/parent_img/bg1.jpg",
+      bg2_url: "/static/img/parent_img/bg2.jpg",
     }
-  },
-  components: {
-    headlist
   }
 }
 </script>
@@ -72,7 +68,7 @@ export default {
 }
 
 .headimg {
-  background-image: url('../assets/parent_img/headline.jpg');
+  background-image: url('/static/img/parent_img/headline.jpg');
   background-repeat: round;
   width: 100%;
   height: 350px;
@@ -115,7 +111,7 @@ export default {
 .bg1 {
   padding: 10px;
   margin-top: 10px;
-  background-image: url('../assets/parent_img/bg1.jpg');
+  background-image: url('/static/img/parent_img/bg1.jpg');
   background-repeat: round;
   width: 600px;
   height: 180px;
@@ -125,7 +121,7 @@ export default {
 .bg2 {
   padding: 10px;
   margin-top: 10px;
-  background-image: url('../assets/parent_img/bg2.jpg');
+  background-image: url('/static/img/parent_img/bg2.jpg');
   background-repeat: round;
   width: 600px;
   height: 150px;

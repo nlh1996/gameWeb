@@ -6,6 +6,7 @@ import User from '@/page/user/User'
 import Pay from '@/page/pay/Pay'
 import Bbs from '@/page/bbs/Bbs'
 import Error from '@/common/Error'
+import Guardian from '@/components/Guardian'
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +39,11 @@ export default new Router({
         path: 'error',
         name: 'error',
         component: Error
+      },
+      {
+        path: 'guardian',
+        name: 'guardian',
+        component: Guardian
       }
     ]
   }, ]
