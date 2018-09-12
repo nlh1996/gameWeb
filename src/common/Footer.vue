@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
     <div class="inner">
+
       <el-row class="foot-text">
         <el-col span="6">
           <div class="footer-colume"><img :src="url"></div>
@@ -24,12 +25,6 @@
         </el-col>
       </el-row>
 
-      <!-- <el-row class="foot-img">
-        <ul class="imgbox">
-          <li v-for="item in images"
-              :key="item"><img :src="item.url"></li>
-        </ul>
-      </el-row> -->
     </div>
   </div>
 </template>
@@ -38,14 +33,7 @@
 export default {
   data () {
     return {
-      url: '/static/img/foot/logo_footer.png',
-      images: [
-        { url: '/static/img/foot/picp_bg.png' },
-        { url: '/static/img/foot/zhengshu_gongshang.png' },
-        { url: '/static/img/foot/zhengshu_zhengxin.png' },
-        { url: '/static/img/foot/weifaIcon.png' },
-        { url: '/static/img/foot/jhgc.png' },
-      ]
+      url: '/static/img/foot/logo_footer.png'
     }
   },
 }
@@ -57,8 +45,9 @@ export default {
   background: #48525e;
 }
 .inner {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
+  background: #48525e;
 }
 .foot-text {
   margin: 0px;

@@ -1,24 +1,23 @@
 <template>
   <div class="extend">
-    <div class="inner">
-      <el-row>
-        <el-col span="6">
-          <div class="extend-content">海外平台</div>
-        </el-col>
-        <el-col span="6">
-          <div class="extend-content">客户服务</div>
-        </el-col>
-        <el-col span="6">
-          <div class="extend-content">游戏美女</div>
-        </el-col>
-        <el-col span="6">
-          <div class="extend-content">
-            <router-link to="/guardian">未成年人监护</router-link>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
+    <el-row>
+      <el-col span="6">
+        <div class="extend-content">海外平台</div>
+      </el-col>
+      <el-col span="6">
+        <div class="extend-content">客户服务</div>
+      </el-col>
+      <el-col span="6">
+        <div class="extend-content">游戏美女</div>
+      </el-col>
+      <el-col span="6">
+        <div class="extend-content">
+          <router-link to="/guardian">未成年人监护</router-link>
+        </div>
+      </el-col>
+    </el-row>
   </div>
+
 </template>
 <script>
 export default {
@@ -26,12 +25,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .extend {
-  margin: 30px 0;
+  padding: 30px 0;
+  background: #f1f4f9;
 }
 .extend-content {
   background: #fff;

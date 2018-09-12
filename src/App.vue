@@ -13,6 +13,7 @@ export default {
 
 #app {
   height: 100%;
+  width: 100%;
 }
 .main {
   background: #f1f4f9;

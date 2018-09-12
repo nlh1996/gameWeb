@@ -1,15 +1,16 @@
 <template>
   <div class="home">
-    <carousel></carousel>
-    <game-list></game-list>
-    <extend></extend>
-    <!-- <el-row>
-      <el-col span="24">
-        <tips></tips>
-      </el-col>
-
-    </el-row> -->
-
+    <div class="banner">
+      <div class="banner__inner">
+        <carousel></carousel>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main__inner">
+        <game-list></game-list>
+        <extend></extend>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,23 +31,25 @@ export default {
 </script>
 <style>
 .home .el-carousel__arrow {
-  width: 44px;
-  height: 60px;
   top: 25%;
   border-radius: 0;
 }
-.home .el-carousel__arrow--left {
-  left: 0;
-}
-.home .el-carousel__arrow--right {
-  right: 0;
-}
-.home .el-carousel__indicators {
-  top: 40%;
-}
 </style>
+
 <style scoped>
 .home {
   padding-top: 60px;
+  width: 100%;
+}
+.banner__inner {
+  width: 100%;
+  min-width: 1200px;
+}
+.main__inner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: -300px;
+  z-index: 999;
 }
 </style>

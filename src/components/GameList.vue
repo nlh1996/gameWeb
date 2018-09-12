@@ -1,41 +1,39 @@
 <template>
   <div class="gamelist">
-    <div class="inner">
-      <div class="header clearfix">
-        <div class="header__title">
-          <span>精品推荐</span>
-        </div>
-        <div class="header__btn">
-          <a class="header__btn-a"
-             href="">
-            <i class="el-icon-refresh"></i>
-            换一换
-          </a>
-        </div>
+    <div class="header clearfix">
+      <div class="header__title">
+        <span>精品推荐</span>
       </div>
-      <!-- / 标题模块 -->
-      <div class="content">
-        <ul class="content__list">
-          <li v-for="item in gameData"
-              :key="item.key"
-              class="content__list-item">
-            <p>
-              <img class="cli-img"
-                   :src="item.img">
-            </p>
-            <p class="cli-title">
-              {{ item.name }}
-            </p>
-            <p class="cli-info">
-              {{ item.info }}
-            </p>
-            <p class="cli-site">
-              <a class="cli-site-a"
-                 :href="item.site">进入官网</a>
-            </p>
-          </li>
-        </ul>
+      <div class="header__btn">
+        <a class="header__btn-a"
+           href="">
+          <i class="el-icon-refresh"></i>
+          换一换
+        </a>
       </div>
+    </div>
+    <!-- / 标题模块 -->
+    <div class="content">
+      <ul class="content__list">
+        <li v-for="item in gameData"
+            :key="item.key"
+            class="content__list-item">
+          <p>
+            <img class="cli-img"
+                 :src="item.img">
+          </p>
+          <p class="cli-title">
+            {{ item.name }}
+          </p>
+          <p class="cli-info">
+            {{ item.info }}
+          </p>
+          <p class="cli-site">
+            <a class="cli-site-a"
+               :href="item.site">进入官网</a>
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -69,15 +67,6 @@ export default {
 <style lang="less" scoped>
 @import '../assets/styles/theme.less';
 .gamelist {
-  position: relative;
-  max-width: 1200px;
-  height: 200px;
-  margin: 0 auto;
-  z-index: 2;
-}
-.inner {
-  position: absolute;
-  top: -520px;
   padding: 20px;
   background: #fff;
 }
@@ -108,7 +97,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .content__list-item {
   width: 263px;
@@ -136,21 +125,5 @@ export default {
 }
 .cli-site-a {
   color: @c3;
-}
-@media screen and (max-width: 1200px) {
-  .inner {
-    position: absolute;
-    top: -380px;
-    padding: 20px;
-    background: #fff;
-  }
-}
-@media screen and (max-width: 850px) {
-  .inner {
-    position: absolute;
-    top: -100px;
-    padding: 20px;
-    background: #fff;
-  }
 }
 </style>
