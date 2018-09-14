@@ -1,20 +1,19 @@
 <template>
-  <div class="gamelist">
-    <div class="header clearfix">
-      <div class="header__title">
-        <span>精品推荐</span>
-      </div>
-      <div class="header__btn">
-        <a class="header__btn-a"
-           href="">
+  <div class="recommend">
+    <title-bar>
+      <span slot="left">精品推荐</span>
+      <div slot="right">
+        <a href="javascript:;"
+           class="updata">
           <i class="el-icon-refresh"></i>
           换一换
         </a>
       </div>
-    </div>
-    <!-- / 标题模块 -->
+    </title-bar>
+
     <div class="content">
-      <ul class="content__list">
+      <ul class="content__list"
+          :style="{'height':height}">
         <li v-for="item in gameData"
             :key="item.key"
             class="content__list-item">
@@ -35,10 +34,11 @@
         </li>
       </ul>
     </div>
+
   </div>
 </template>
-
 <script>
+import titleBar from '@/common/Bar'
 export default {
   data () {
     return {
@@ -60,32 +60,20 @@ export default {
       ]
     }
   },
+  props: ['height'],
+  components: {
+    titleBar: titleBar
+  }
 }
 </script>
 <style lang="less" scoped>
 @import '../assets/styles/theme.less';
-.gamelist {
-  padding: 20px;
-  background: #fff;
-}
-.header {
-  // width: 65%;
-  border-left: 5px solid @main-col;
-  line-height: 20px;
-  background: #fff;
-}
-.header__title {
-  float: left;
-  margin-left: 10px;
-  font-size: 18px;
-}
-.header__btn {
-  float: right;
-  margin-right: 10px;
-}
-.header__btn-a {
+.updata {
   font-size: 14px;
   color: #333;
+  &:hover {
+    color: @main-col;
+  }
 }
 
 .content {
@@ -93,22 +81,26 @@ export default {
 }
 .content__list {
   display: flex;
+  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: space-around;
 }
 .content__list-item {
   width: 263px;
-  margin-top: 20px;
 }
 .cli-img {
   width: 100%;
-  height: 180px;
+  height: 171px;
 }
 .cli-title {
   margin: 10px 0;
   font-size: 18px;
   font-weight: bold;
+  &:hover {
+    color: @main-col;
+  }
 }
 .cli-info {
   font-size: 14px;
@@ -123,5 +115,8 @@ export default {
 }
 .cli-site-a {
   color: @c3;
+  &:hover {
+    color: @main-col;
+  }
 }
 </style>

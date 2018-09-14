@@ -51,4 +51,13 @@ export default {
 }
 </style>
 
+<style lang="stylus" scoped>
+.game__content
+  position relative
+  width 100px
+  .game__header
+    
+</style>
+
+
 
