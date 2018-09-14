@@ -21,7 +21,7 @@
         name: 'voucherView',
         data() {
             return {
-                key: value
+
             }
         },
         components:{

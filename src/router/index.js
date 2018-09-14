@@ -8,9 +8,11 @@ import VoucherView from '@/components/voucher_center/VoucherView'
 import LeftMenu from '@/components/voucher_center/LeftMenu'
 import RightTable from '@/components/voucher_center/RightTable'
 import Personal from '@/components/personal_center/Personal'
+
 Vue.use(Router)
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: '/',

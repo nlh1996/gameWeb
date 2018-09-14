@@ -2,7 +2,7 @@
   <div class="block">
  
     <el-carousel height="300px">
-      <el-carousel-item v-for="item in images" :key="item">
+      <el-carousel-item v-for="item in images" :key="item.url">
         <h3><img :src="item.url" width=100%></h3>
       </el-carousel-item>
     </el-carousel>

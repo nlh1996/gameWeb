@@ -11,7 +11,6 @@ import login from '@/components/Login'
     export default {
         data() {
             return {
-                key: value
             }
         },
         components: {
