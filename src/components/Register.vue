@@ -1,6 +1,9 @@
 <template>
     <div class="register">
         <div class="header">
+            <div class="btn_back">
+                <el-button type="text" :circle="true" @click="$store.commit('switch_register')"></el-button>
+            </div>
         </div>
 
         <div class="tabs">
@@ -32,11 +35,12 @@
                     <el-form-item label="">
                         <el-button type="warning" @click="axiosRegister">快速注册</el-button>
                     </el-form-item>              <el-form-item label="">
-                        已注册，请<el-button type="text">登录</el-button></el-button>
+                        已注册，请<el-button type="text">登录</el-button>
                     </el-form-item>
                     </el-form>
                 </div>
               </el-tab-pane>
+
               <el-tab-pane label="手机号码注册">
                 <div class="table">
                     <el-form>
@@ -78,7 +82,6 @@
         <div class="clear">
 
         </div>
-
 
     </div>
 </template>
@@ -134,6 +137,11 @@ import axios from 'axios'
 .header{
     height: 50px;
     background-image: url('../assets/register_img/register_head.png');
+}
+.btn_back{
+    float: right;
+    margin-right: 16px;
+    margin-top: 12px;
 }
 .tabs{
     background: #f0f0f0;

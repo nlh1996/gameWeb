@@ -3,18 +3,24 @@
         <div class="login">
             <login></login>
         </div>
+            <cover-layer></cover-layer>
+        <div>
+
+        </div>
     </div>
 </template>
 
 <script>
 import login from '@/components/Login'
+import coverLayer from '@/components/CoverLayer'
     export default {
         data() {
             return {
             }
         },
         components: {
-            login
+            login,
+            coverLayer
         }
     }
 </script>

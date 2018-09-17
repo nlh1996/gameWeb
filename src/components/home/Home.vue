@@ -21,41 +21,36 @@
                     <login></login>
                 </div>
             </el-col>
-         </el-row>
+        </el-row>
 
-         <el-row>
-             <div class="extend">
-                 <el-col :span="6"><div class="extend-content">海外平台</div></el-col>  
-                 <el-col :span="6"><div class="extend-content">客户服务</div></el-col>
-                 <el-col :span="6"><div class="extend-content">游戏美女</div></el-col>
-                 <el-col :span="6">
-                    <div class="extend-content"><router-link to="/guardian">未成年人监护</router-link></div>
-                 </el-col>
-             </div>
-         </el-row>
-         <div v-if="show">
-             <register></register>
-         </div>
+        <el-row>
+            <div class="extend">
+                <el-col :span="6"><div class="extend-content">海外平台</div></el-col>  
+                <el-col :span="6"><div class="extend-content">客户服务</div></el-col>
+                <el-col :span="6"><div class="extend-content">游戏美女</div></el-col>
+                <el-col :span="6">
+                    <div class="extend-content"><router-link to="/guardian" target="_blank">未成年人监护</router-link></div>
+                </el-col>
+            </div>
+        </el-row>
+        <div>
+            <cover-layer></cover-layer>
+        </div>
     </div>
 </template>
 
 <script>  
+    import coverLayer from '@/components/CoverLayer'
     import gamelist from '@/components/home/GameList'
-    import register from '@/components/Register'
     import carousel from '@/components/home/Carousel'
     import login from '@/components/Login'
     export default {
         name: 'home',
-        data() {
-            return {
-                show: false
-            }
-        },
         components:{
             gamelist,
             carousel,
             login,
-            register
+            coverLayer
         }    
     }
 </script>
@@ -78,7 +73,6 @@
     margin-top: 30px;
     margin-left: 10px;
 }
-
 
 
 </style>

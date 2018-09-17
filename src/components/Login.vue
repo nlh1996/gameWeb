@@ -27,7 +27,7 @@
             </el-form-item>
 
             <el-form-item>
-                <router-link to="register"><el-button type="success">免费注册</el-button></router-link>
+                <el-button type="success" @click="$store.commit('switch_register')">免费注册</el-button>
             </el-form-item>
 
             <el-form-item>
@@ -45,7 +45,7 @@ import axios from 'axios'
         data() {
             return {
                 username: '',
-                password: ''
+                password: '',    
             }
         },
         methods: {
@@ -64,7 +64,7 @@ import axios from 'axios'
                 .catch((error) => {
                     console.log(error)
                 })
-            }
+            },
         }
     }
 </script>
