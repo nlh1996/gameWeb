@@ -53,7 +53,7 @@ export default {
   width: 1200px;
   margin: 0 auto;
   margin-top: -300px;
-  z-index: 999;
+  z-index: 998;
 }
 
 .game {

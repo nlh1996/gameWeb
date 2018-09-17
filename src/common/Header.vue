@@ -52,7 +52,7 @@ export default {
     return {
       url: '/static/img/head/logo.png',
       navData: [
-        { key: 0, name: '首页', router: 'home', state: true },
+        { key: 0, name: '首页', router: 'home', state: false },
         { key: 1, name: '充值', router: 'pay', state: false },
         { key: 2, name: '论坛', router: 'bbs', state: false },
         { key: 3, name: '个人中心', router: 'user', state: false },
@@ -92,6 +92,12 @@ export default {
         this.offLink = false
       }
     }
+  },
+  mounted () {
+    let path = (this.$route.path).replace(/\//, '')
+    const arr = this.navData.filter(o => o.router === path)
+    arr[0].state = true
+    this.setMouseOver(arr[0])
   }
 }
 </script>
