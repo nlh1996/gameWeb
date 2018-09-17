@@ -17,7 +17,7 @@
 
             <el-col :span="6">
                 <div class="colume-title">友情链接</div>
-                <div class="colume-content"><a href="https://github.com/nlh1996/gameWeb">git地址</a></div>
+                <div class="colume-content"><a href="https://github.com/nlh1996/gameWeb" target="_blank">git地址</a></div>
             </el-col>
         </el-row>
 

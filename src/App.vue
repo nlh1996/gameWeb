@@ -3,7 +3,11 @@
     <div class="header">         
       <headlist></headlist>
     </div>
-    <router-view></router-view>
+
+    <div class="router">
+      <router-view></router-view>
+    </div>
+
     <div class="tips">
       <tips></tips>
     </div>
@@ -51,4 +55,9 @@ export default {
   margin-top: 40px;
   float: none;
 }
+
+.router{
+  margin: 0 auto;
+}
+
 </style>

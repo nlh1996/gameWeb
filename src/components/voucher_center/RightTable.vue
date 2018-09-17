@@ -2,8 +2,8 @@
   <div>
     <el-form ref="form" :model="form" label-width="120px" label-position="left">
       <el-form-item label="充值到：">
-        <el-col span="10">
-          <el-radio-group v-model="redio3">
+        <el-col :span="10">
+          <el-radio-group>
           <el-radio-button label="U币"></el-radio-button>
           <el-radio-button label="游戏"></el-radio-button>
           <el-radio-button label="游米"></el-radio-button>
@@ -18,7 +18,7 @@
       </el-form-item>
 
       <el-form-item label="选择游戏：">
-        <el-col span="10">
+        <el-col :span="10">
         <el-select v-model="form.region" placeholder="选择充值游戏">
           <el-option label="游戏一" value=""></el-option>
           <el-option label="游戏二" value=""></el-option>
@@ -44,7 +44,7 @@
 
       <el-form-item label="选择充值金额：">
         <el-row>
-        <el-col span="20">
+        <el-col :span="20">
           <el-radio-group>
           <el-radio-button label="10元"></el-radio-button>
           <el-radio-button label="50元"></el-radio-button>
@@ -55,7 +55,7 @@
         </el-col>
         </el-row>
         <el-row>
-          <el-col span="6">
+          <el-col :span="6">
             <el-input placeholder="其他金额"></el-input>单笔充值最少10元
           </el-col>
         </el-row>
@@ -86,7 +86,7 @@
       }
     },
     mounted() {
-      console.log("1111")
+      
     },
   }
 </script>

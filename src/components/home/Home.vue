@@ -3,7 +3,7 @@
         <el-row>
             <div>
                 <el-col :span="24">
-                    <!-- <carousel></carousel> -->
+                    <carousel></carousel>
                 </el-col>
             </div>
      
@@ -33,20 +33,29 @@
                  </el-col>
              </div>
          </el-row>
+         <div v-if="show">
+             <register></register>
+         </div>
     </div>
 </template>
 
 <script>  
     import gamelist from '@/components/home/GameList'
-
+    import register from '@/components/Register'
     import carousel from '@/components/home/Carousel'
     import login from '@/components/Login'
     export default {
         name: 'home',
+        data() {
+            return {
+                show: false
+            }
+        },
         components:{
             gamelist,
             carousel,
-            login
+            login,
+            register
         }    
     }
 </script>

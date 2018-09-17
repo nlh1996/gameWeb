@@ -21,8 +21,10 @@
               @mouseover="setMouseOver(item)"
               @click="setClick(item)">
             <router-link class="nav__item-link"
-                         :class="{'nav__item_current':item.state}"
-                         :to="{name:item.router}">{{ item.name }}</router-link>
+                        :class="{'nav__item_current':item.state}"
+                        :to="{name:item.router}">
+              {{ item.name }}
+            </router-link>
           </li>
         </ul>
         <!-- /头部导航模块 -->
