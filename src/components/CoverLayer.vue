@@ -30,8 +30,8 @@
 }
 .register{
     position: fixed;
-    left: 30%;
-    top: 30px;
+    left: 35%;
+    top: 10px;
     z-index: 3;
     opacity: 1;
 }
