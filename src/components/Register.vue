@@ -12,19 +12,27 @@
                 <div class="table">
                     <el-form :rules="rules" :model="msg" ref="msg" class="demo-ruleForm">
                     <el-form-item label="" prop="zhanghao">
-                        <el-input v-model="msg.zhanghao" placeholder="账号"></el-input>
+                      <el-tooltip class="item" effect="light" content="5-20位字母和数字，必须字母开头" placement="right">
+                        <el-input v-model="msg.zhanghao" placeholder="账号" maxlength="20" autofocus="true"></el-input>
+                      </el-tooltip>  
                     </el-form-item>
                     <el-form-item label="" prop="password">
-                        <el-input v-model="msg.password" placeholder="密码" type="password"></el-input>
+                      <el-tooltip class="item" effect="light" content="6-20个字符，不含空格键" placement="right">
+                        <el-input v-model="msg.password" placeholder="密码" type="password" maxlength="20"></el-input>
+                      </el-tooltip>
                     </el-form-item>
                     <el-form-item label="" prop="re_password">
-                        <el-input v-model="msg.re_password" placeholder="确认密码" type="password"></el-input>
+                        <el-input v-model="msg.re_password" placeholder="确认密码" type="password" maxlength="20"></el-input>
                     </el-form-item>
                     <el-form-item label="" prop="realname">
+                      <el-tooltip class="item" effect="light" content="请输入您的姓名，2至4个汉字，例如：张三" placement="right">
                         <el-input v-model="msg.realname" placeholder="真实姓名"></el-input>
+                      </el-tooltip>
                     </el-form-item>
                     <el-form-item label="" prop="identity_card">
+                      <el-tooltip class="item" effect="light" content="请准确填写身份证号码" placement="right">
                         <el-input v-model="msg.identity_card" placeholder="身份证号码"></el-input>
+                      </el-tooltip>
                     </el-form-item>
                     <el-form-item label="" prop="">
                         <el-input v-model="msg.verification" placeholder="验证码"></el-input>
@@ -90,12 +98,13 @@
 
 <script>
 import axios from 'axios'
+import store from '../store/index.js'
     export default {
         data() {
             // 此处自定义校验手机号码js逻辑
             var validatePhone = (rule, value, callback) => {
                 let reg = /^[1][3,4,5,7,8][0-9]{9}$/
-                value = this.msg.phone_number
+                value = this.msg.phone_number.replace(/\s+/g,'')
                 if (!value) {
                     return callback(new Error('手机号码不能为空!!'))
                 }
@@ -111,7 +120,7 @@ import axios from 'axios'
             // 此处自定义校验账号js逻辑
             var validateZhanghao = (rule,value,callback) => {
                 let reg = /^[a-zA-Z][0-9a-zA-Z]{4,19}$/
-                value = this.msg.zhanghao
+                value = this.msg.zhanghao.replace(/\s+/g,'')
                 if(!value) {
                     return callback(new Error('账号不能为空!!'))
                 }
@@ -130,7 +139,7 @@ import axios from 'axios'
             var validatePassWord = (rule,value,callback) => {
                 let reg1 = /\s/
                 let reg2 = /^(?:\d+|[a-zA-Z]+|[!@#$%^&*]+){6,20}$/
-                value = this.msg.password
+                value = this.msg.password.replace(/\s+/g,'')
                 if(!value) {
                     return callback(new Error('密码不能为空!!'))
                 }
@@ -165,7 +174,7 @@ import axios from 'axios'
              // 此处自定义校验真实姓名js逻辑
             var validateRealname = (rule,value,callback) => {
                 let reg = /^[\u4e00-\u9fa5]{2,4}$/
-                value = this.msg.re_password
+                value = this.msg.realname.replace(/\s+/g,'')
                 if(!value) {
                     return callback(new Error('姓名不能为空!!'))
                 }
@@ -181,7 +190,7 @@ import axios from 'axios'
              // 此处自定义校验身份证js逻辑
             var validateIdentityCard = (rule,value,callback) => {
                 let reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
-                value = this.msg.identity_card
+                value = this.msg.identity_card.replace(/\s+/g,'')
                 if(!value) {
                     return callback(new Error('身份证号不能为空!!'))
                 }
@@ -208,11 +217,9 @@ import axios from 'axios'
                 openLoading: false,
                 rules: {
                     zhanghao: [
-                        { required: true, message: '5-20位字母和数字，必须字母开头', trigger: 'change' },
                         { validator: validateZhanghao, trigger: 'blur'}
                     ],
                     password: [
-                        { required: true, message: '6-20个字符，不含空格键', trigger: 'change' },
                         { validator: validatePassWord, trigger: 'blur'}
                     ],
                     re_password: [
@@ -220,11 +227,9 @@ import axios from 'axios'
                         { validator: validateRePassWord, trigger: 'blur'}
                     ],
                     realname: [
-                        { required: true, message: '请输入您的姓名，2至4个汉字，例如：张三', trigger: 'change' },
                         { validator: validateRealname, trigger: 'blur'}
                     ],
                     identity_card:[
-                        { required: true, message: '请准确填写身份证号码', trigger: 'change' },
                         { validator: validateIdentityCard, trigger: 'blur'}
                     ],
                     phone: [{ required: true, validator: validatePhone, trigger: 'blur' }],    
@@ -248,14 +253,12 @@ import axios from 'axios'
                             }
                         })
                         .then(response => {
-                            console.log(response)
-                            //如果返回code为200，代表注册成功，我们给用户作Toast提示
-                            if(response.data.code == 200){
-                                Toast.success('注册成功')
-                                this.$router.push('/home')
+                            //如果返回code为200，代表注册成功
+                            if(response.status == 200){
+                                console.log(response.data)
+                                store.state.register.show = false
                             }else{
-                                console.log(response.data.message)
-                                Toast.fail('注册失败')
+                                console.log(response.status)
                                 this.openLoading=false
                             }
                         })
@@ -278,7 +281,7 @@ import axios from 'axios'
 <style scoped>
 .register{
     width: 405px;
-    margin: 200px auto;
+    margin: 150px auto;
 }
 .header{
     height: 50px;

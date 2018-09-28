@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const PrerenderSpaPlugin = require('prerender-spa-plugin')
+// const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
 
 const env = require('../config/prod.env')
 
@@ -27,7 +29,18 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
+
   plugins: [
+    // new PrerenderSpaPlugin({
+    //     staticDir: path.resolve(__dirname, '../dist'),
+    //     routes: [ '/', '/register', '/error', '/guardian','/voucherView','/personal','/voucherView/leftMenu','/voucherView/rightTable'],
+    //     renderer: new Renderer({
+    //       rendererAfterTime: 5000,
+    //       headless: true,
+    //     })
+    // }),
+
+
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env

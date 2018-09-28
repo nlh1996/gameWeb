@@ -4,7 +4,7 @@
         <div class="headimg">
 
         </div>
-        <diV class="aa">
+        <div class="aa">
         <div class="left">
             <div class="text">
                 <p> 卷首语：“网络游戏未成年人家长监护工程”是一项由游族网络等众多网络游戏企业共同发起并参与实施，
@@ -34,7 +34,11 @@
                 <p>客服传真：021-33676520</p>
             </div>
         </div>
-        </diV>
+
+        <div class="vedio">
+            <video src="/static/bb.mp4" autoplay width="400px" controls></video>
+        </div>
+        </div>
         <br class="clear" />
     </div>
 </template>
@@ -142,6 +146,13 @@
 }
 .clear{
     clear: both;
+}
+
+.vedio{
+  position: fixed;
+  right: 0px;
+  top: 70px;  /**如果不设置则按照默认的位置显示*/
+  z-index: 3;
 }
 
 

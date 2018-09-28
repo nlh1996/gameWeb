@@ -15,7 +15,9 @@
     <hr>
       <div class="foot">
         <foot></foot>
-      </div>
+      </div> 
+     
+
   </div>
 </template>
 
@@ -29,7 +31,10 @@ export default {
     foot,
     tips,
     headlist
-  }
+  },
+  // mounted() {
+  //   document.querySelector('#audio').play()
+  // }
 }
 </script>
 
@@ -59,5 +64,7 @@ export default {
 .router{
   margin: 0 auto;
 }
+
+
 
 </style>

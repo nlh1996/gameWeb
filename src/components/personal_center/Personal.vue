@@ -5,7 +5,8 @@
         </div>
             <cover-layer></cover-layer>
         <div>
-
+            <audio id="audio" src="/static/music/aa.mp3" preload="auto" autoplay loop></audio>
+            
         </div>
     </div>
 </template>
