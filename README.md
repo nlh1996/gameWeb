@@ -1,6 +1,6 @@
 # gameweb
 
-> A Vue.js project
+> A Vue.js project 在线预览https://nlh1996.github.io/gameWeb/
 
 ## Build Setup
 
