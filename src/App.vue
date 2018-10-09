@@ -13,9 +13,10 @@
     </div>
     
     <hr>
-      <div class="foot">
-        <foot></foot>
-      </div> 
+    
+    <div class="foot">
+      <foot></foot>
+    </div> 
      
 
   </div>

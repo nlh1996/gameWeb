@@ -51,7 +51,7 @@ import axios from 'axios'
         methods: {
             axiosLogin(){
                 axios({
-                    url: 'api/v1/login',
+                    url: 'http://115.159.77.155:11400/v1/login',
                     method: 'post',
                     params:{
                         username: this.username,

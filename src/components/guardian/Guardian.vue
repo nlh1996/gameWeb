@@ -149,10 +149,10 @@
 }
 
 .vedio{
-  position: fixed;
-  right: 0px;
-  top: 70px;  /**如果不设置则按照默认的位置显示*/
-  z-index: 3;
+    position: fixed;
+    right: 0px;
+    top: 70px;  /**如果不设置则按照默认的位置显示*/
+    z-index: 3;
 }
 
 

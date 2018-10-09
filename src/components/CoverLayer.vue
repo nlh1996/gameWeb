@@ -19,14 +19,14 @@
 
 <style scoped>
 .zhebi{
-        position: fixed;
-        background-color: rgb(116, 115, 115);
-        left: 0px;
-        top: 0px;  /**如果不设置则按照默认的位置显示*/
-        width: 100%; /***100%:标识遮罩层覆盖整个浏览器窗口*/
-        height: 100%;
-        opacity: 0.6;  /**透明度*/
-        z-index: 2;  /**Z轴坐标：值遇到标识越贴近用户*/
+    position: fixed;
+    background-color: rgb(116, 115, 115);
+    left: 0px;
+    top: 0px;  /**如果不设置则按照默认的位置显示*/
+    width: 100%; /***100%:标识遮罩层覆盖整个浏览器窗口*/
+    height: 100%;
+    opacity: 0.6;  /**透明度*/
+    z-index: 2;  /**Z轴坐标：值遇到标识越贴近用户*/
 }
 .register{
     position: fixed;

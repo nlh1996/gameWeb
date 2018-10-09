@@ -12,7 +12,7 @@ import Personal from '@/components/personal_center/Personal'
 Vue.use(Router)
 
 export default new Router({
-  mode: "history",
+//  mode: "history",
   routes: [
     {
       path: '/',

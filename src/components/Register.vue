@@ -281,7 +281,7 @@ import store from '../store/index.js'
 <style scoped>
 .register{
     width: 405px;
-    margin: 150px auto;
+    margin: 10% auto;
 }
 .header{
     height: 50px;
@@ -294,7 +294,7 @@ import store from '../store/index.js'
 }
 .tabs{
     background: #f0f0f0;
-
+    height: 590px;
 }
 .table{
     margin: 0 auto;
