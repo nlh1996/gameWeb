@@ -2,6 +2,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
+//重复请求取消
 let cancel ,promiseArr = {}
 const CancelToken = axios.CancelToken;
 //请求拦截器
@@ -66,8 +67,8 @@ axios.interceptors.response.use(response => {
     } else {
       err.message = "连接到服务器失败"
     }
-    message.err(err.message)
-      return Promise.resolve(err.response)
+    alert(err.message)
+    return Promise.resolve(err.response)
 })
 
 //抽离get,post公共配置

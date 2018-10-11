@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import axios from 'axios'
     export default {
         data() {
             return {
@@ -50,19 +49,15 @@ import axios from 'axios'
         },
         methods: {
             axiosLogin(){
-                axios({
-                    url: 'api/v1/login',
-                    method: 'post',
-                    params:{
+                this.$http.post(
+                    '/v1/login',    
+                    {
                         username: this.username,
                         password: this.password
                     }
-                })
+                )
                 .then(response => {
                     console.log(response.data)
-                })
-                .catch((error) => {
-                    console.log(error)
                 })
             },
         }

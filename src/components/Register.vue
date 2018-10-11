@@ -249,8 +249,14 @@
                         .then(response => {
                             //如果返回code为200，代表注册成功
                             if(response.status == 200){
-                                console.log(response.data)
-                                this.$store.state.register.show = false
+                                if(response.data == '0'){
+                                    console.log("注册成功！")
+                                    this.$store.state.register.show = false
+                                }
+                                else{
+                                    alert("用户名存在！")
+                                    return false
+                                }
                             }
                         })
                     }
@@ -269,7 +275,7 @@
 <style scoped>
 .register{
     width: 405px;
-    margin: 10% auto;
+    margin: 5% auto;
 }
 .header{
     height: 50px;
