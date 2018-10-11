@@ -24,7 +24,7 @@
 <script>  
 import carousel from '@/components/Carousel'
 import tips from "@/components/Tips"
-import extend from "@/components/Extend"
+import extend from "@/components/Extend" 
 import gameRecomend from "@/components/Recommend"
 import gameHot from "@/components/Hot"
 export default {

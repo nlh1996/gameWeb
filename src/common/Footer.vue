@@ -40,8 +40,12 @@ export default {
 </script>
 
 <style scoped>
+div {
+  margin-top: 10px;
+}
 .footer {
   width: 100%;
+  margin: 0;
   background: #48525e;
 }
 .inner {
@@ -82,8 +86,5 @@ li {
   /* margin-left: 90px; */
   font-size: 14px;
   width: 70%;
-}
-div {
-  margin-top: 10px;
 }
 </style>
