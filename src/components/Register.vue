@@ -97,8 +97,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-import store from '../store/index.js'
     export default {
         data() {
             // 此处自定义校验手机号码js逻辑
@@ -241,32 +239,22 @@ import store from '../store/index.js'
             axiosRegister(formName){
                 this.$refs[formName].validate(valid => {
                     if (valid) {
-                        axios({
-                            url: 'api/v1/register',
-                            method: 'post',
-                            params:{
-                                zhanghao: this.msg.zhanghao,
-                                password: this.msg.password,
-                                realname: this.msg.realname,
-                                identity_card: this.msg.identity_card,
-                                phone_number: this.msg.phone_number
-                            }
+                        this.$http.post('/v1/register',{
+                            zhanghao: this.msg.zhanghao,
+                            password: this.msg.password,
+                            realname: this.msg.realname,
+                            identity_card: this.msg.identity_card,
+                            phone_number: this.msg.phone_number            
                         })
                         .then(response => {
                             //如果返回code为200，代表注册成功
                             if(response.status == 200){
                                 console.log(response.data)
-                                store.state.register.show = false
-                            }else{
-                                console.log(response.status)
-                                this.openLoading=false
+                                this.$store.state.register.show = false
                             }
                         })
-                        .catch((error) => {
-                            console.log(error)
-                            this.openLoading=false
-                        })
-                    } else {
+                    }
+                    else {
                         console.log('error submit!!')
                         return false
                     }
