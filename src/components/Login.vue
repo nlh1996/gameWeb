@@ -63,13 +63,32 @@
                 form: {
                     headImg: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2564997198,4187947589&fm=58',
                     userName: '',
-                    postsNum: '',
-                    myReply: '',
-                    receivedReply: '',
+                    postsNum: '0',
+                    myReply: '1',
+                    receivedReply: '1',
                     myCollect: ''
                 } 
             }
         },
+
+        //路由切换导致组件销毁重新挂载
+        beforeMount: function(){
+            if(window.localStorage.username)
+            {
+                this.form.userName = window.localStorage.username             
+            }            
+        },
+
+        //渲染之前获取localStorage中保存的用户名（用户名为后端发送的数据）
+        beforeUpdate: function() {
+            if(window.localStorage.username)
+            {
+                this.form.userName = window.localStorage.username             
+            }
+        },
+
+
+
         methods: {
             axiosLogin(){
                 this.$http.post(
@@ -80,7 +99,16 @@
                     }
                 )
                 .then(response => {
-                    this.form.userName = this.username
+                    var storage = window.localStorage
+                    //将JSON对象转换为JSON字符串存储
+                    // let form = JSON.stringify(this.form)
+                    // storage.data = form
+                    // console.log(typeof storage.data)
+                    storage.username = this.username 
+                    //将JSON字符串转换成为JSON对象输出
+                    // let json = storage.data
+                    // let jsonObj = JSON.parse(json)
+                    // console.log(typeof jsonObj)
                     this.$store.state.login.show = false
 
                 })

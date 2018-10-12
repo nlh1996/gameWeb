@@ -1,6 +1,6 @@
 export default {
     state:{
-        show:false
+        show: false
     },
     mutations:{
         switch_register(state){//这里的state对应着上面这个state
