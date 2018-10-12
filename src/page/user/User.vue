@@ -52,7 +52,7 @@ export default {
   padding-top: 60px;
   width: 100%;
   height: 600px;
-  background-image: url('/static/img/banner.jpg');
+  background-image: url('../../../static/img/banner.jpg');
   background-repeat: no-repeat;
   background-origin: content-box;
 }

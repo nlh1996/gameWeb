@@ -16,9 +16,9 @@ export default {
   data () {
     return {
       images: [
-        { url: "/static/img/carousel/102022153.jpg" },
-        { url: "/static/img/carousel/121813175.jpg" },
-        { url: "/static/img/carousel/163557031.jpg" }
+        { url: require("../../static/img/carousel/102022153.jpg") },
+        { url: require("../../static/img/carousel/121813175.jpg") },
+        { url: require("../../static/img/carousel/163557031.jpg") }
       ]
     }
   },
