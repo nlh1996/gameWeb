@@ -10,6 +10,7 @@ import Guardian from '@/components/Guardian'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [{
     path: '/',
     component: Index,
