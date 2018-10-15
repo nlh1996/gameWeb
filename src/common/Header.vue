@@ -50,7 +50,7 @@
 export default {
   data () {
     return {
-      url: require('../../static/img/head/logo.png'),
+      url: require('../assets/img/head/logo.png'),
       navData: [
         { key: 0, name: '首页', router: 'home', state: false },
         { key: 1, name: '充值', router: 'pay', state: false },
@@ -110,7 +110,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-image: url('../../static/img/head/platform_header_bg.jpg');
+  background-image: url('../assets/img/head/platform_header_bg.jpg');
   z-index: 999;
 }
 .inner {
@@ -196,7 +196,7 @@ export default {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url('../../static/img/sprite.png');
+  background-image: url('../assets/img/sprite.png');
 }
 .game__link_on {
   background-position: 0px -453px;

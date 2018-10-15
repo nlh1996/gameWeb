@@ -33,7 +33,7 @@
 export default {
   data () {
     return {
-      url: require('../../static/img/foot/logo_footer.png')
+      url: require('../assets/img/foot/logo_footer.png')
     }
   },
 }
