@@ -16,9 +16,10 @@ export default {
   data () {
     return {
       images: [
-        { url: require("../assets//img/carousel/102022153.jpg") },
-        { url: require("../assets//img/carousel/121813175.jpg") },
-        { url: require("../assets//img/carousel/163557031.jpg") }
+        { url: 'http://upload.youzu.com/youzu/2018/0917/190135966.jpg' },
+        { url: 'http://upload.youzu.com/youzu/2018/1008/161421812.jpg' },
+        { url: 'http://upload.youzu.com/youzu/2018/1009/151031443.jpg' },
+        { url: 'http://upload.youzu.com/youzu/2018/0929/140327634.jpg' }
       ]
     }
   },
