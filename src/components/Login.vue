@@ -10,7 +10,7 @@
                         <el-input placeholder="密码" v-model="password"></el-input>
                     </el-col>
                     <el-col :span="8">
-                        <el-button class="button" style="height:80px" @click="axiosLogin">
+                        <el-button class="button" style="height:80px" @click="login">
                             <span style="color:white;font-size:18px"><strong>登录</strong></span>
                         </el-button>
                     </el-col>
@@ -27,7 +27,7 @@
             </el-form-item>
 
             <el-form-item>
-                <el-button type="success" @click="$store.commit('switch_register')">免费注册</el-button>
+                <el-button type="success" @click="$store.commit('SWITCH_REGISTER')">免费注册</el-button>
             </el-form-item>
 
             <el-form-item>
@@ -60,61 +60,51 @@
             return {
                 username: '',
                 password: '',
-                form: {
-                    headImg: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2564997198,4187947589&fm=58',
-                    userName: '',
-                    postsNum: '0',
-                    myReply: '1',
-                    receivedReply: '1',
-                    myCollect: ''
-                } 
+                // form: {
+                //     headImg: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2564997198,4187947589&fm=58',
+                //     userName: this.$store.state.login.userdata.userName,
+                //     postsNum: this.$store.state.login.userdata.postsNum,
+                //     myReply: '1',
+                //     receivedReply: '1',
+                //     myCollect: ''
+                // } 
             }
         },
+        //因为组件渲染快于axios请求所以用计算属性保存数据，当axios请求到数据后计算属性会驱动组件重新渲染组件
+        computed: {
+            form: function() {
+                return this.$store.state.login.userdata || ''
+            }
+        },
+
 
         //路由切换导致组件销毁重新挂载
-        beforeMount: function(){
-            if(window.localStorage.username)
-            {
-                this.form.userName = window.localStorage.username             
-            }            
-        },
+        //beforeMount: function(){
 
-        //渲染之前获取localStorage中保存的用户名（用户名为后端发送的数据）
-        beforeUpdate: function() {
-            if(window.localStorage.username)
-            {
-                this.form.userName = window.localStorage.username             
-            }
-        },
+            // if(window.localStorage.username)
+            // {
+            //     this.form.userName = this.$store.state.login.userdata.userName             
+            // }            
+        //},
 
-
+        // //渲染之前获取localStorage中保存的用户名（用户名为后端发送的数据）
+        // beforeUpdate: function() {
+        //     if(window.localStorage.username)
+        //     {
+        //         this.form.userName = window.localStorage.username             
+        //     }
+        // },
 
         methods: {
-            axiosLogin(){
-                this.$http.post(
-                    '/v1/login',    
-                    {
-                        username: this.username,
-                        password: this.password
-                    }
-                )
-                .then(response => {
-                    var storage = window.localStorage
-                    //将JSON对象转换为JSON字符串存储
-                    // let form = JSON.stringify(this.form)
-                    // storage.data = form
-                    // console.log(typeof storage.data)
-                    storage.username = this.username 
-                    //将JSON字符串转换成为JSON对象输出
-                    // let json = storage.data
-                    // let jsonObj = JSON.parse(json)
-                    // console.log(typeof jsonObj)
-                    this.$store.state.login.show = false
-
-                })
+            login(){
+                //分发用户登录的事件给vuex
+                this.$store.dispatch('login',this.username,this.password)
             },
-        }
-    }
+
+        },
+
+  }
+    
 </script>
 
 <style scoped>

@@ -26,7 +26,7 @@
     width: 100%; /***100%:标识遮罩层覆盖整个浏览器窗口*/
     height: 100%;
     opacity: 0.6;  /**透明度*/
-    z-index: 2;  /**Z轴坐标：值遇到标识越贴近用户*/
+    z-index: 2;  /**Z轴坐标：值越大标识越贴近用户*/
 }
 .register{
     position: fixed;

@@ -2,7 +2,7 @@
     <div class="register">
         <div class="header">
             <div class="btn_back">
-                <el-button type="text" :circle="true" @click="$store.commit('switch_register')"></el-button>
+                <el-button type="text" :circle="true" @click="$store.commit('SWITCH_REGISTER')"></el-button>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
                         <el-button type="warning" @click="axiosRegister('msg')" >快速注册</el-button>
                     </el-form-item>              
                     <el-form-item label="">
-                        已注册，请<el-button type="text" @click="$store.commit('switch_register')">登录</el-button>
+                        已注册，请<el-button type="text" @click="$store.commit('SWITCH_REGISTER')">登录</el-button>
                     </el-form-item>
                     </el-form>
                 </div>
@@ -81,7 +81,7 @@
                         <el-button type="warning" @click="axiosRegister" :loading="openLoading">快速注册</el-button>
                     </el-form-item>              
                     <el-form-item label="">
-                        已注册，请<el-button type="text" @click="$store.commit('switch_register')">登录</el-button>
+                        已注册，请<el-button type="text" @click="$store.commit('SWITCH_REGISTER')">登录</el-button>
                     </el-form-item>
                     </el-form>
                 </div>                  
@@ -251,7 +251,7 @@
                             if(response.status == 200){
                                 if(response.data == '0'){
                                     console.log("注册成功！")
-                                    this.$store.state.register.show = false
+                                    this.$store.commit("SWITCH_REGISTER")
                                 }
                                 else{
                                     alert("用户名存在！")
