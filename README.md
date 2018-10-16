@@ -1,6 +1,6 @@
 # gameweb
 
-> A Vue.js project 在线预览https://nlh1996.github.io/gameWeb/
+> Vue全家桶 游戏门户网站 含社区功能（开发中） 在线预览https://nlh1996.github.io/gameWeb/
 
 ## Build Setup
 
