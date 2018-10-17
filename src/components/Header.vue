@@ -45,7 +45,7 @@ export default {
       navData: [
         { key: 0, name: '首页', router: 'home', state: true },
         { key: 1, name: '充值', router: 'voucherView', state: false },
-        { key: 2, name: '论坛', router: 'error', state: false },
+        { key: 2, name: '论坛', router: 'bbs', state: false },
         { key: 3, name: '个人', router: 'personal', state: false },
       ],
       slideObject: {

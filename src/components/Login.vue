@@ -60,14 +60,6 @@
             return {
                 username: '',
                 password: '',
-                // form: {
-                //     headImg: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2564997198,4187947589&fm=58',
-                //     userName: this.$store.state.login.userdata.userName,
-                //     postsNum: this.$store.state.login.userdata.postsNum,
-                //     myReply: '1',
-                //     receivedReply: '1',
-                //     myCollect: ''
-                // } 
             }
         },
         //因为组件渲染快于axios请求所以用计算属性保存数据，当axios请求到数据后计算属性会驱动组件重新渲染组件
@@ -83,7 +75,7 @@
 
             // if(window.localStorage.username)
             // {
-            //     this.form.userName = this.$store.state.login.userdata.userName             
+            //     this.form.userName = window.localStorage.username            
             // }            
         //},
 
@@ -110,8 +102,8 @@
 <style scoped>
 .form{
     padding: 20px;
-    margin: 20px;
-    width: 260px;
+    margin: 10px;
+    width: 230px;
     background-color: white;
 }
 .button{

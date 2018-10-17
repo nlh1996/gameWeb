@@ -80,7 +80,7 @@ axios.defaults.headers = {
 axios.defaults.timeout = 10000
 
 export default {
-  //get请求
+    //get请求
     get (url,params) {
       return new Promise((resolve,reject) => {
         axios({
@@ -96,7 +96,7 @@ export default {
       })
     },
 
-  //post请求
+    //post请求
     post (url,data) {
       return new Promise((resolve,reject) => {
         axios({
