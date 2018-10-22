@@ -1,6 +1,7 @@
 # gameweb
 
 > Vue全家桶 游戏门户网站 含社区功能（开发中） 在线预览https://nlh1996.github.io/gameWeb/
+该项目后台代码地址https://github.com/nlh1996/goWeb需要go环境编译运行
 
 ## Build Setup
 
