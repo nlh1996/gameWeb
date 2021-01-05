@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "copy-webpack-plugin": "^4.5.2",
     "element-ui": "^2.4.6",
     "prerender-spa-plugin": "^3.4.0",
